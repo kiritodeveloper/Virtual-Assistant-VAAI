@@ -15,7 +15,7 @@ Para poder inicial el proyecto descargar e instalar dependencias
 	#npm i
 	#cd Virtual-Assistant-VAAI
 	#npm run dev
-```UNIX console
+```
 
 ###Visualización
 Visualizar proyecto en Navegador de Google Chrome en http://localhost:8080/
