@@ -1,0 +1,61 @@
+.brandsContainer{
+    max-width: 1300px;
+    border: 1px solid #e8e8e8;
+    height: 200px;
+    border-radius: 6px;
+    margin: 10px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    .brand{
+        width: 25%;
+        float: left;
+        padding: 5px;
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+        .image{
+            border-radius: 6px;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            &:hover{
+                .links{
+                    top: 0;
+                }
+            }
+            img{
+                width: 70%;
+            }
+            .links{
+                top: 200px;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transition: 0.3s;
+                opacity: 0.9;
+                .link{
+                    height: 25%;
+                    text-align: left;
+                    padding: 0 20px;
+                    box-sizing: border-box;
+                    transition: 0.3s;
+                    cursor: pointer;
+                    &:hover{
+                        padding: 0 30px;
+                    }
+                    a{
+                        padding: 5px;
+                        color: white;
+                        font-family: 'OpenSansBold';
+                        font-weight: 600;
+                        top: 8px;
+                        position: relative;
+                    }
+                }
+            }
+
+        }
+
+    }
+}

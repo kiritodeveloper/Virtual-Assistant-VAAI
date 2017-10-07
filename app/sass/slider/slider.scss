@@ -1,0 +1,157 @@
+.mobile{
+	.slider{
+		height: 200px;
+		.sliderWrap{
+			.slide{
+				height: 200px;
+				img{
+					height: 100%;
+        }
+      }
+    }
+  }
+}
+	.bullets{
+		bottom: -20px;
+		span.bullet{
+			width: 10px;
+			height: 10px;
+    }
+  }
+.mobile.device{
+	.slider{
+		.arrow{
+			display: none;
+    }
+		.arrows{
+			display: none;
+    }
+  }
+}
+	.wraperHome{
+		.container{
+			.toolTipBlue.menu.chip.active{
+				display: none!important;
+      }
+    }
+  }
+
+.tablet{
+	.bullets{
+		bottom: -20px;
+  }
+}
+
+.slider{
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+	box-sizing: border-box;
+	background-color: white;
+	box-sizing: border-box;
+	overflow: hidden;
+	z-index: 1;
+	&:hover{
+		.arrow.left{
+			left: -50px;
+    }
+		.arrow.right{
+			right: -50px;
+    }
+		.bullets{
+			bottom: 10px;
+    }
+  }
+	.arrow{
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		position: absolute;
+		background-color: rgba(0,0,0,0.3);
+		top: 50%;
+		margin-top: -50px;
+		transition: 0.4s;
+		cursor: pointer;
+		z-index: 2;
+		&:hover{
+			background-color: rgba(0,0,0,0.7);
+    }
+		span.icon{
+			color: white;
+			font-size: 36px;
+			position: absolute;
+    }
+  }
+	.arrow.left{
+		left: -100px;
+		span.icon{
+			right: 10px;
+			top: 30px;
+    }
+  }
+	.arrow.right{
+		right: -100px;
+		span.icon{
+			left: 10px;
+			top: 30px;
+    }
+  }
+	.bullets{
+		height: 14px;
+		width: auto;
+		position: absolute;
+		border: 0px solid #c1c1c1;
+		left: 50%;
+		bottom: 10px;
+		z-index: 2;
+		transition: 0.3s;
+		span.bullet{
+			position: relative;
+			width: 9px;
+			height: 9px;
+			background-color: #8378f4;
+			float: left;
+			border-radius: 2px;
+			margin-left: 9px;
+			cursor: pointer;
+			transition: 0.3s;
+      transform: rotate(45deg);
+			&:hover{
+				box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+				transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        transform: scale(1.4);
+      }
+    }
+  }
+		span.bullet.active{
+			background-color: #59d9a4;
+    }
+	.sliderWrap{
+		position: relative;
+		z-index: 1;
+		transition: 0.4s;
+		.slide{
+			background: #f8f8f8;
+			box-sizing: border-box;
+			float: left;
+			height: 300px;
+			text-align: center;
+			position: relative;
+    }
+			img{
+				position: relative;
+      }
+			.back{
+				width: 50%;
+				height: 100%;
+				position: absolute;
+      }
+			.back.left{
+				left: 0;
+      }
+			.back.right{
+				right: 0;
+      }
+  }
+}

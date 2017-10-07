@@ -1,0 +1,145 @@
+.prices{
+    position: relative;
+    width: 100%;
+    .banner{
+        position: relative;
+        max-width: 1300px;
+        height: 500px;
+        margin: 0 auto;
+        clear: both;
+        img{
+            width: 100%;
+        }
+        .title{
+            position: absolute;
+            z-index: 99;
+            top: 120px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            .up{
+                font-size: 80px;
+            }
+            .text{
+                font-size: 18px;
+                padding: 0 25%;
+            }
+        }
+    }
+    .bar{
+        width: 100%;
+        height: 50px;
+        background-color: #1b3c59;
+        text-align: center;
+        position: relative;
+        color: white;
+        .textBar{
+            font: 400 16px/50px 'OpenSansRegular';
+        }
+        .button{
+            border: 2px solid white;
+            border-radius: 20px;
+            padding: 5px 10px;
+            margin-left: 20px;
+            font: 400 13px/50px 'OpenSansRegular';
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                    background-color: white;
+                    color: #1b3c59;
+            }
+        }
+    }
+    .paqs{
+        width: 1300px;
+        position: relative;
+        margin: 10px auto;
+
+        padding: 20px;
+        border-radius: 10px;
+        .title{
+            text-align: center;
+            font: 400 32px/50px 'OpenSansBold';
+            color: #505050;
+        }
+        .mainBlock{
+            padding: 10px 20px;
+            overflow: auto;
+            .block{
+                width: 25%;
+                float: left;
+                height: auto;
+                box-sizing: border-box;
+                padding: 4px;
+                .blockInt#b1{
+                    border-top: 4px solid #fbc02d;
+                }
+                .blockInt#b2{
+                    border-top: 4px solid #448aff;
+                }
+                .blockInt#b3{
+                    border-top: 4px solid #da05ac;
+                }
+                .blockInt#b4{
+                    border-top: 4px solid #4caf50;
+                }
+                .blockInt{
+                    border-bottom: 1px solid #d8d8d8;
+                    border-left: 1px solid #d8d8d8;
+                    border-right: 1px solid #d8d8d8;
+                    border-radius: 4px;
+                    padding: 10px 20px;
+                    box-sizing: border-box;
+                    .title{
+                        font: 600 20px/40px 'OpenSansBold';
+                        text-align: left;
+                    }
+                    .description{
+                        font: 400 14px/20px 'OpenSansRegular';
+                    }
+                    .desde{
+                        color: #505050;
+                        margin-top: 20px;
+                        font: 600 14px/18px 'OpenSansBold';
+                    }
+                    .price{
+                        .first{
+                            color: #ef6c0f;
+                            font: 600 28px/32px 'OpenSansBold';
+                        }
+                        .second{
+                            color: #ef6c0f;
+                            font: 600 14px/32px 'OpenSansBold';
+                        }
+                    }
+                    .ahorro{
+                        color: gray;
+                        font: 600 14px/16px 'OpenSansBold';
+                    }
+                    .button{
+                        width: 100%;
+                        height: 45px;
+                        background-color: #ef6c0f;
+                        color: white;
+                        font: 600 18px/45px 'OpenSansBold';
+                        border-radius: 4px;
+                        margin: 30px 0;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+                    .list{
+                        margin: 0;
+                        padding: 0;
+                        list-style-type: none;
+                        .option{
+                            font: 400 15px/28px 'OpenSansRegular';
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+
+}

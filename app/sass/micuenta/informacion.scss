@@ -1,0 +1,136 @@
+.micuenta {
+    background-color: #f9f9f9;
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    float: left;
+    .menumicuenta {
+        background-color: white;
+        width: 25%;
+        border-top: 1px solid #e0e0e0;
+        border-left: 1px solid #e0e0e0;
+        border-right: 1px solid #e0e0e0;
+        border-radius: 4px;
+        float: left;
+        position: relative;
+        .options {
+            .listaMenu {
+                list-style: none;
+                .option {
+                    cursor: pointer;
+                    border-bottom: 1px solid #e0e0e0;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #f7f7f7;
+                    }
+                    padding: 12px 15px;
+                    a {
+                        color: #333;
+                        span {
+                            font-family: 'OpenSansRegular';
+                            font-weight: 400;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contenmicuenta {
+        width: 75%;
+        border-radius: 4px;
+        float: right;
+        position: relative;
+        padding-left: 20px;
+        box-sizing: border-box;
+        .content {
+            border: 1px solid #e0e0e0;
+            background-color: white;
+            border-radius: 4px;
+            padding: 20px;
+            .title {
+                font-family: 'OpenSansBold';
+                font-weight: 600;
+                color: #333;
+            }
+            .labelsContent {
+                padding: 10px 0px;
+                box-sizing: border-box;
+                span {
+                    color: #888;
+                    font-size: 14px;
+                }
+                a {
+                    color: #0057ff;
+                    font-size: 14px;
+                    padding: 0 0 0 5px;
+                }
+            }
+            .controlContent {
+                .input {
+                    width: 300px;
+                    height: 40px;
+                    background-color: #ededed;
+                    border-radius: 3px;
+                    border: 1px solid #d6d6d6;
+                    position: relative;
+                    input {
+                        outline: none;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background-color: transparent;
+                        top: 0;
+                        left: 0;
+                        padding: 0 10px;
+                        box-sizing: border-box;
+                        font-size: 14px;
+                    }
+                }
+                .choose {
+                    width: 100%;
+                    height: 400px;
+                    margin: 10px 0;
+                    input {
+                        width: 100%;
+                    }
+                    .data {
+                        width: 100%;
+                        border: 1px solid #e3e3e3;
+                        border-radius: 6px;
+                        margin: 20px 0;
+                        height: 350px;
+                        .image {
+                            float: left;
+                            width: 50%;
+                            height: 100%;
+                            position: relative;
+                            padding: 30px;
+                            box-sizing: border-box;
+                            .containerImg {
+                                border: 2px dashed #cecece;
+                                height: 100%;
+                                border-radius: 12px;
+                                background: #f9f9f9;
+                                position: relative;
+                                overflow: hidden;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .loader {
+                            float: left;
+                            width: 50%;
+                            height: 100%;
+                            position: relative;
+                            padding: 30px;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

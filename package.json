@@ -1,0 +1,33 @@
+{
+	"name": "copilotjs",
+	"version": "1.5.0",
+	"description": "CopilotJS is a framework to create SPA Applications",
+	"main": "server.js",
+	"scripts": {
+		"build": "gulp build",
+		"start": "gulp",
+		"server": "node server.js"
+	},
+	"authors": "Fernando Robles",
+	"license": "MIT",
+	"dependencies": {},
+	"devDependencies": {
+		"body-parser": "^1.15.0",
+		"express": "^4.13.4",
+		"gulp": "^3.9.1",
+		"gulp-concat": "^2.6.0",
+		"gulp-jsvalidate": "^2.1.0",
+		"gulp-minify": "0.0.7",
+		"gulp-nodemon": "^2.0.6",
+		"gulp-notify": "^2.2.0",
+		"gulp-plumber": "^1.1.0",
+		"gulp-sass": "^2.2.0",
+		"gulp-sourcemaps": "^1.6.0",
+		"gulp-uglify": "^1.5.4",
+		"method-override": "^2.3.5",
+		"request": "^2.69.0",
+		"uglify": "^0.1.5",
+		"underscore": "^1.8.3",
+		"yargs": "^4.6.0"
+	}
+}

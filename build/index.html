@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="copilotjsApp" class="no-touch" id="touchId">
+<head>
+	<base href="/">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="description" content=""/>
+	<meta name="language" content="ES"/>
+	<meta name="keywords" content="" />
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/fonts.css">
+	<title>Nail & Glam</title>
+</head>
+<body ng-controller="CopilotJSCtrl" ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()">
+
+	<script>
+	  window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : '428634240821313',
+	      xfbml      : true,
+	      version    : 'v2.8'
+	    });
+	    FB.AppEvents.logPageView();
+			console.log(FB)
+	  };
+
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "//connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+	</script>
+
+	<!-- Directive Header-->
+	<div id="lockheed-header" header-ng></div>
+
+	<div id="lockheed-menu" menu-ng></div>
+
+	<!-- IE fix  -->
+	<div class="view-container">
+		<div ng-view></div>
+	</div>
+
+	<div id="lockheed-footer" footer-ng></div>
+
+	<!--[if lt IE 9]>
+		<script src="/scripts/librariesie.js"></script>
+	<![endif]-->
+
+	<!--[if gte IE 9 | !IE ]><!-->
+		<script src="/scripts/libraries.js"></script>
+	<!--<![endif]-->
+
+	<!-- Routes -->
+	<script src="/scripts/copilot.js"></script>
+</body>
+</html>

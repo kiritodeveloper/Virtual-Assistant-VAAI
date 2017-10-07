@@ -1,0 +1,238 @@
+.header{
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #11BFAE;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  background: #f0f1f0;
+  position: relative;
+  z-index: 9;
+  .logo{
+    width: 180px;
+    float: left;
+    cursor: pointer;
+    .nail{
+      width: 35%;
+    }
+    .tipo{
+      width: 50%;
+    }
+  }
+  .searchBox{
+    width: 30%;
+    margin: 0 auto;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: #f0f1f0;
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    position: relative;
+    input{
+      width: 80%;
+      height: 60%;
+      position: absolute;
+      outline-style: none;
+      background-color: transparent;
+      font-size: 16px;
+      font-weight: bolder;
+      color: gray;
+      margin-top: -2px;
+      padding: 0 34px;
+    }
+    .icon.icon-microphone{
+      position: absolute;
+      left: 16px;
+      top: 15px;
+      font-size: 12px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+      z-index: 99;
+      &:hover{
+        transform: scale(1.2);
+        color: white;
+      }
+    }
+    .icon.icon-search4{
+      position: absolute;
+      right: 10px;
+      top: 7px;
+      font-size: 28px;
+      color: gray;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover{
+        color: white;
+      }
+    }
+  }
+  .searchBox.active{
+    width: 60%;
+  }
+  .login{
+    float: right;
+    position: relative;
+    top: 3px;
+    width: 150px;
+    border: 0px solid red;
+    padding: 10px 20px;
+    text-align: right;
+    font-size: 14px;
+    .ingresar{
+      span{
+        font-family: 'OpenSansRegular';
+        color: gray;
+      }
+    }
+    .icon.icon-ellipsis{
+      background: #f0f1f0;
+      border-radius: 50%;
+      color: gray;
+      padding: 5px;
+      margin-left: 10px;
+      margin-top: 4px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover{
+        background-color: #e2e2e2;
+      }
+    }
+    .globeLogin.active{
+      display: block;
+    }
+    .globeLogin{
+      display: none;
+      width: 200px;
+      height: 120px;
+      border-radius: 4px;
+      border: 1px solid #e8e8e8;
+      position: absolute;
+      right: 10px;
+      top: 34px;
+      background: white;
+      .triangle{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent #fff transparent;
+        position: absolute;
+        top: -10px;
+        right: 10px;
+      }
+      .triangle.back{
+        border-color: transparent transparent #e8e8e8 transparent;
+        top: -11px;
+      }
+      .lineOption{
+        width: 100%;
+        text-align: left;
+        padding: 5px 12px;
+        box-sizing: border-box;
+        cursor: pointer;
+        color: #696969;
+        font-family: 'OpenSansRegular';
+        &:hover{
+          border-right: 4px solid #0e988b;
+          background-color: #11BFAE;
+          color: white;
+          a{
+            color: white;
+          }
+          .icon{
+              color: white;
+          }
+        }
+        .icon{
+          margin: 10px 10px 0 0;
+          position: relative;
+          top: 2px;
+          font-size: 16px;
+          color: #0e988b;
+        }
+        a{
+          font-family: 'OpenSansRegular';
+          color: #696969;
+        }
+      }
+    }
+  }
+  .cart{
+    float: right;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #11BFAE;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover{
+      background-color: #55bf93;
+    }
+    .icon.icon-cart{
+        color: white;
+        position: absolute;
+        font-size: 22px;
+        left: 8px;
+        top: 12px;
+    }
+    .num{
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #8378f4;
+      color: white;
+      text-align: center;
+      top: -5px;
+      right: -5px;
+      .number{
+        font-size: 12px;
+        top: -2px;
+        position: relative;
+      }
+    }
+  }
+}
+
+.header.phone{
+  .logo{
+      width: 70px;
+      margin-right: 15px;
+    .nail{
+        width: 100%;
+    }
+    .tipo{
+      display: none;
+    }
+  }
+  .searchBox{
+    width: 45%;
+  }
+  .login{
+    width: 55px;
+  }
+}
+
+.header.tablet{
+  .logo{
+      width: 70px;
+      margin-right: 15px;
+    .nail{
+        width: 100%;
+    }
+    .tipo{
+      display: none;
+    }
+  }
+  .searchBox{
+    width: 60%;
+  }
+  .login{
+    width: 120px;
+  }
+}

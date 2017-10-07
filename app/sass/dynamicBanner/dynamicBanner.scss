@@ -1,0 +1,61 @@
+.dynamicBanner{
+	height: 400px;
+	margin-top: 30px;
+	background-color: #60afb1;
+	position: relative;
+	.imagenBanner{
+		width: 400px;
+		height: 100%;
+		text-align: right;
+		float: right;
+		img{
+			height: 100%;
+			float: right;
+		}
+	}
+	.boxText{
+		width: 500px;
+		height: 150px;
+		position: absolute;
+		top: 50%;
+		margin-top: -75px;
+		left: 10%;
+		color: white;
+			.title{
+				font-family: 'OpenSansBold';
+				font-size: 28px;
+				line-height: 50px;
+				text-align: left;
+			}
+			.text{
+				font-family: 'OpenSansLight';	
+				font-size: 18px;
+				text-align: left;
+
+			}
+			.button{
+				padding: 9px 50px;
+				background-color: #1b3c59;
+				margin-top: 20px;
+				border-radius: 28px;
+				float: left;
+				transition: 0.3s;
+				cursor: pointer;
+				&:hover{
+					background-color: #204e77;
+					cursor: pointer;
+				}
+				.text{
+					line-height: 20px;
+					font-size: 16px;
+					font-family: 'OpenSansBold';
+				}
+				.icon{
+					position: relative;
+					margin-left: 15px;
+					font-size: 20px;
+					top: 2px;
+				}
+			}
+		}
+}

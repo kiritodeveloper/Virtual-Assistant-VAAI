@@ -1,0 +1,73 @@
+.shes{
+	margin: 20px 0;
+	overflow: hidden;
+	.bioghrap{
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 10px;
+		box-sizing: border-box;
+		overflow: hidden;
+		.person{
+			padding: 5px 5px;
+			width: 33.33%;
+			height: 220px;
+			float: left;
+			border: 0px solid red;
+			position: relative;
+			overflow: hidden;
+			.photo{
+				position: relative;
+				text-align: right;
+				overflow: hidden;
+				&:hover{
+					img{
+						transform: scale(1.1);
+					}
+				}
+				img{
+					transition: 0.4s;
+					width: 100%;
+				}
+				.description{
+					position: absolute;
+    				top: 0;
+				    left: 0;
+				    text-align: left;
+				    color: white;
+				    padding: 10px 0 0 10px;
+				    width: 65%;
+				    .name{
+					 	font-family: 'OpenSansBold';
+					 	font-size: 18px;
+					 }
+					 .titulo{
+					 	font-family: 'OpenSansLight';
+					 	font-size: 12px;
+					 	margin-bottom: 10px;
+					 }
+					.desc{
+					 	font-family: 'OpenSansRegular';
+					 	font-size: 14px;
+					 	line-height: 22px;
+					 	padding-right: 30px;
+					 }
+				}
+				.description.right{
+					 text-align: right;
+					 right: 0;
+					 padding: 10px 10px 0 0;
+					 float: right;
+					 left: inherit;
+					 .name{
+					 	font-family: 'OpenSansBold';
+					 	font-size: 18px;
+					 }
+					 .desc{
+					 	padding-right: 0;
+					 	padding-left: 30px;
+					 }
+				}
+			}
+		}
+	}
+}

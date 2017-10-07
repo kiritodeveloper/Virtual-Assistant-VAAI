@@ -1,0 +1,161 @@
+.footer{
+  width: 100%;
+  height: 440px;
+  background-color: #456173;
+  position: relative;
+  bottom: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-top: 2px solid #11BFAE;
+  z-index: 10;
+  float: left;
+  .socialSection{
+    background-color: #1B3C59;
+    height: 144px;
+    .controls{
+      position: relative;
+      margin: 0 auto;
+      max-width: 70%;
+      height: 100%;
+      padding: 20px 0;
+      box-sizing: border-box;
+      .first{
+        float: left;
+        width: 100%;
+        .sections{
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          .subSection{
+            float: left;
+            width: 15%;
+            color: white;
+            font-family: 'OpenSansRegular';
+            font-size: 14px;
+          }
+          .subSection.last{
+            width: 40%;
+            text-align: right;
+          }
+        }
+      }
+      .second{
+        float: left;
+        width: 100%;
+        height: 80px;
+        padding: 10px 0;
+        .secondSection{
+          width: 33.33%;
+          float: left;
+        }
+        .secondSection#socialnetwork{
+          padding-top: 20px;
+          .circleIcon{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            float: right;
+            margin: 0 0 0 15px;
+            cursor: pointer;
+            text-align: center;
+            transition: 0.3s;
+            position: relative;
+            &:hover{
+              transform:scale(1.3);
+            }
+            .icon{
+              font-size: 26px;
+              position: relative;
+              top: 8px;
+              color: white;
+            }
+          }
+          #facebook{
+            background-color: #235b99;
+          }
+          #twitter{
+            background-color: #1daef3;
+          }
+          #instagram{
+            background-color: #e7286d;
+          }
+          #pinteres{
+            background-color: #fc242e;
+          }
+          #youtube{
+            background-color: #e61c26;
+          }
+        } 
+        .secondSection#disclaimer{
+            padding: 0px 40px 0 0px;
+            font: 400px ;
+            font-family: 'OpenSansBold';
+            color: white;
+            line-height: 22px;
+            margin-top: 22px;
+          }  
+
+      }
+    }
+  }
+  .columns{
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    .col{
+      float: left;
+      width: 25%;
+      border: 0px solid white;
+      padding: 10px 0;
+      box-sizing: border-box;
+      .title{
+        font-family: 'DancingBold';
+        font-size: 24px;
+        color: white;
+        line-height: 60px;
+      }
+      ul.list{
+        list-style-type: none;
+        font-family: 'OpenSansRegular';
+        font-size: 14px;
+        a{
+          color: white;
+          cursor: pointer;
+          line-height: 30px;
+          transition: 0.3s;
+          font-family: 'OpenSansRegular';
+          &:hover{
+            color: #11BFAE;
+          }
+        }
+      }
+    }
+  }
+  .logofooter{
+    width: 70px;
+    margin: 0 auto;
+    position: relative;
+    top: 8px;
+    height: 55px;
+    clear: both;
+    img{
+      width: 100%;
+    }
+  }
+  .copy{
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    background: #11BFAE;
+    left: 0;
+    text-align: center;
+    color: white;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 40px;
+  }
+}
