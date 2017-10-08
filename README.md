@@ -14,7 +14,7 @@ Para poder inicial el proyecto descargar e instalar dependencias
 	#git clone https://github.com/starla01/Virtual-Assistant-VAAI.git
 	#npm i
 	#cd Virtual-Assistant-VAAI
-	#npm run dev
+	#node server.js
 ```
 
 ### Visualización
