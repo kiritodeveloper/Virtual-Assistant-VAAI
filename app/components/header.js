@@ -44,7 +44,7 @@
                             type: 'text',
                             id: 'textBox',
                             className: 'textBox',
-                            placeholder: '¿Busca algo por favor?',
+                            placeholder: '¿Busca algo por favor tontooccoo?',
                             onFocus: function() {
                                 _this.setState({ searchActive: true })
                                 console.log('focus')
