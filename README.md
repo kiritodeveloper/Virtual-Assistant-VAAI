@@ -12,8 +12,8 @@ Para poder inicial el proyecto descargar e instalar dependencias
 
 ```UNIX console
 	#git clone https://github.com/starla01/Virtual-Assistant-VAAI.git
-	#npm i
 	#cd Virtual-Assistant-VAAI
+	#npm i
 	#npm start
 ```
 
