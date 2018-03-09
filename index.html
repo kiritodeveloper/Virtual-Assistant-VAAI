@@ -15,25 +15,6 @@
 </head>
 <body ng-controller="CopilotJSCtrl" ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()">
 
-	<script>
-	  window.fbAsyncInit = function() {
-	    FB.init({
-	      appId      : '428634240821313',
-	      xfbml      : true,
-	      version    : 'v2.8'
-	    });
-	    FB.AppEvents.logPageView();
-			console.log(FB)
-	  };
-
-	  (function(d, s, id){
-	     var js, fjs = d.getElementsByTagName(s)[0];
-	     if (d.getElementById(id)) {return;}
-	     js = d.createElement(s); js.id = id;
-	     js.src = "//connect.facebook.net/en_US/sdk.js";
-	     fjs.parentNode.insertBefore(js, fjs);
-	   }(document, 'script', 'facebook-jssdk'));
-	</script>
 
 	<!-- Directive Header-->
 	<div id="lockheed-header" header-ng></div>

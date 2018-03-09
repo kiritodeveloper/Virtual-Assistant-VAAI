@@ -50,7 +50,6 @@
 
 			var data = this.state.text;
 			validate = data.match(regex);
-			console.log("text: ", validate)
 
 
 

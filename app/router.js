@@ -12,6 +12,10 @@ angular
 		templateUrl: '/views/page.html',
 		controller: 'IngresarCtrl'
 	})
+	.when('/carrito', {
+		templateUrl: '/views/page.html',
+		controller: 'carritoCtrl'
+	})
 	.when('/registro', {
 		templateUrl: '/views/page.html',
 		controller: 'RegistroCtrl'

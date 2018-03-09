@@ -1,16 +1,21 @@
 'use strict';
-
 /**
- * @View        : Home
- * @Appname     : vicky
- * @description : Render the home page
- * @return      : renders.home
+ * @View        : Across
+ * @Appname     : Sam
+ * @description : Render Sam Component
+ * @return      : renders.Sam
  */
 (function() {
     renders.components = renders.components || {};
 
     function getState(store) {
-        return { dataFilter: '', activeProducts: false, finding: true, voice: '' };
+        return {
+            dataFilter: '',
+            activeProducts: false,
+            finding: true,
+            voice: '',
+            listEvents: false,
+        };
     };
     renders.components.vicky = React.createClass({
         SpeechRecognition: null,
@@ -18,149 +23,256 @@
         position: 0,
         list: [],
         newList: [],
-        nums: ['uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce', 'trece', 'catorce'],
+        renderEvents: '',
         getInitialState: function() {
             return getState(this.props.store);
         },
         componentDidMount: function() {
-            //this.props.store.addListener(this._onChange);
             this.initSecuence();
         },
+        // componentWillMount() {
+        //     if (navigator.mediaDevices && navigator.mediaDevices.enumerateDevices) {
+        //         // Firefox 38+ seems having support of enumerateDevicesx
+        //         navigator.enumerateDevices = function(callback) {
+        //             navigator.mediaDevices.enumerateDevices().then(callback);
+        //         };
+        //     }
+
+        //     var MediaDevices = [];
+        //     var isHTTPs = location.protocol === 'https:';
+        //     var canEnumerate = false;
+
+        //     if (typeof MediaStreamTrack !== 'undefined' && 'getSources' in MediaStreamTrack) {
+        //         canEnumerate = true;
+        //     } else if (navigator.mediaDevices && !!navigator.mediaDevices.enumerateDevices) {
+        //         canEnumerate = true;
+        //     }
+
+        //     var hasMicrophone = false;
+        //     var hasSpeakers = false;
+        //     var hasWebcam = false;
+
+        //     var isMicrophoneAlreadyCaptured = false;
+        //     var isWebcamAlreadyCaptured = false;
+
+        //     function checkDeviceSupport(callback) {
+        //         if (!canEnumerate) {
+        //             return;
+        //         }
+
+        //         if (!navigator.enumerateDevices && window.MediaStreamTrack && window.MediaStreamTrack.getSources) {
+        //             navigator.enumerateDevices = window.MediaStreamTrack.getSources.bind(window.MediaStreamTrack);
+        //         }
+
+        //         if (!navigator.enumerateDevices && navigator.enumerateDevices) {
+        //             navigator.enumerateDevices = navigator.enumerateDevices.bind(navigator);
+        //         }
+
+        //         if (!navigator.enumerateDevices) {
+        //             if (callback) {
+        //                 callback();
+        //             }
+        //             return;
+        //         }
+
+        //         MediaDevices = [];
+        //         navigator.enumerateDevices(function(devices) {
+        //             devices.forEach(function(_device) {
+        //                 var device = {};
+        //                 for (var d in _device) {
+        //                     device[d] = _device[d];
+        //                 }
+
+        //                 if (device.kind === 'audio') {
+        //                     device.kind = 'audioinput';
+        //                 }
+
+        //                 if (device.kind === 'video') {
+        //                     device.kind = 'videoinput';
+        //                 }
+
+        //                 var skip;
+        //                 MediaDevices.forEach(function(d) {
+        //                     if (d.id === device.id && d.kind === device.kind) {
+        //                         skip = true;
+        //                     }
+        //                 });
+
+        //                 if (skip) {
+        //                     return;
+        //                 }
+
+        //                 if (!device.deviceId) {
+        //                     device.deviceId = device.id;
+        //                 }
+
+        //                 if (!device.id) {
+        //                     device.id = device.deviceId;
+        //                 }
+
+        //                 if (!device.label) {
+        //                     device.label = 'Please invoke getUserMedia once.';
+        //                     if (!isHTTPs) {
+        //                         device.label = 'HTTPs is required to get label of this ' + device.kind + ' device.';
+        //                     }
+        //                 } else {
+        //                     if (device.kind === 'videoinput' && !isWebcamAlreadyCaptured) {
+        //                         isWebcamAlreadyCaptured = true;
+        //                     }
+
+        //                     if (device.kind === 'audioinput' && !isMicrophoneAlreadyCaptured) {
+        //                         isMicrophoneAlreadyCaptured = true;
+        //                     }
+        //                 }
+
+        //                 if (device.kind === 'audioinput') {
+        //                     hasMicrophone = true;
+        //                 }
+
+        //                 if (device.kind === 'audiooutput') {
+        //                     hasSpeakers = true;
+        //                 }
+
+        //                 if (device.kind === 'videoinput') {
+        //                     hasWebcam = true;
+        //                 }
+
+        //                 // there is no 'videoouput' in the spec.
+
+        //                 MediaDevices.push(device);
+        //             });
+
+        //             if (callback) {
+        //                 callback();
+        //             }
+        //         });
+        //     }
+
+        //     // check for microphone/camera support!
+        //     checkDeviceSupport(function() {
+        //         document.write('hasWebCam: ', hasWebcam, '<br>');
+        //         document.write('hasMicrophone: ', hasMicrophone, '<br>');
+        //         document.write('isMicrophoneAlreadyCaptured: ', isMicrophoneAlreadyCaptured, '<br>');
+        //         document.write('isWebcamAlreadyCaptured: ', isWebcamAlreadyCaptured, '<br>');
+        //     });
+
+        // },
         _onChange: function() {
             if (this.isMounted()) {
                 this.setState(getState(this.props.store));
             }
         },
-        searchService: function(word) {
-            var _this = this;
-            _this.setState({ finding: true });
-            // $.ajax({
-            //     url: '/scripts/staticFiles/catalog.js',
-            //     dataType: 'json',
-            //     type: 'get',
-            //     success: function(data) {
-            //         console.log("data: ", data)
-
-            // if (data.docs !== undefined) {
-            //     _this.setState({ activeProducts: true })
-            //     _this.setState({ dataFilter: data.docs })
-            //     if (_this.state.dataFilter.length >= 1) {
-            //         _this.setState({ activeProducts: true })
-            //     } else {
-            //         _this.setState({ activeProducts: false })
-            //         _this.speak("¿Que es algo?. " + 'No encuentro nada con la palabra algo');
-            //     }
-            // } else {
-            //     _this.setState({ activeProducts: false })
-            //     _this.speak("¿Que es algo?. " + 'No encuentro nada con la palabra algo');
-            // }
-            //     }
-            // })
-
-            $.ajax({
-                url: "/scripts/staticFiles/catalog.js",
-                dataType: "json",
-                success: function(result) {
-                    _this.list = result
-
-                    $.map(_this.list, function(val, key) {
-                        if (val.terms.trim() == word.trim()) {
-                            _this.newList.push(val)
-                        }
-                    })
-                    _this.list = _this.newList;
-                    this.forceUpdate();
-                    _this.getSearch();
-                }
-            });
-        },
-        getSearch: function() {
-            var _this = this;
-            console.log(_this.newList)
-            return $.map(_this.newList, function(k, i) {
-                return div({ className: 'list' }, k)
-            })
-        },
-        selecProducts: function(string) {
-            var _this = this;
-            var sParsed = string.replace(', ', '').replace('y ', '')
-            var arrNumbers = sParsed.split(' ')
-            arrNumbers.splice(0, 1)
-        },
         cleanTEXT: function(text) {
+            var _this = this;
             var type = '',
                 cad = text.replace(/undefined/g, '').toLowerCase(),
                 arrWords = cad.split(' '),
                 finder = arrWords[1] + ' ' + arrWords[2] + ' ' + arrWords[3] + ' ' + arrWords[4] + ' ' + arrWords[5],
-                trigger = arrWords[0];
-
-            if (trigger == "busca" || trigger == "necesito" || trigger == "quiero" || trigger == "encuentra" || trigger == "buscame" || trigger == "búscame") { type = "busca"; }
-            if (trigger == "juega" || trigger == "cuéntame" || trigger == "hazme" || trigger == "comenta" || trigger == "dime" || trigger == "dimé" || trigger == "di") { type = "juega"; }
-            if (trigger == "hola") { type = "saludo"; }
-            if (trigger == "gracias" || trigger == "adios" || trigger == "bye" || trigger == "vete" || trigger == "chau" || trigger == "chao" || trigger == "by") { type = "adios"; }
-            if (trigger == "ir" || trigger == "ve" || trigger == "ver") { type = "redirect" }
-
-
-            this.processSam(type, finder.replace(/undefined/g, ''))
+                trigger = arrWords[0].toString().toLowerCase();
+            walmartVoice.trigger.map(function(val, key) {
+                if (val.word.toLowerCase().indexOf(trigger) >= 0) {
+                    _this.processSam(val.type.toLowerCase(), finder.replace(/undefined/g, ''), val.response)
+                }
+            })
         },
-        processSam: function(trigger, finder) {
+
+        processSam: function(trigger, finder, response) {
             var _this = this,
                 textVOICE;
+            if (trigger.toLowerCase() == 'saludo') {
+                response.filter(function(val, key) {
+                    if (val.name.toLowerCase().indexOf(finder.toLowerCase().trim()) >= 0) {
+                        _this.speak(val.sentence);
+                        return;
+                    }
+                })
+            }
+            if (trigger.toLowerCase() == "evento") {
+                _this.speak("Muy bien!, cuéntame que tipo de evento");
+                this.props.OnEvents();
+                return;
+            }
 
-            // **** Interaction Finder width GOOGLE CLOUD recognition OR WHATSON ****
-            if (trigger == 'saludo') {
-                _this.setState({ activeProducts: false, voice: true })
-                if (finder.indexOf('siri') >= 0) {
-                    textVOICE = '¡Hola!, pero yo no soy Siri, soy Vicky';
-                    _this.speak(textVOICE);
-                } else if (finder.indexOf('cortana') >= 0) {
-                    textVOICE = '¡Hola!, Aun que estuvieramos en Windows no me gustaria ser ella';
-                    _this.speak(textVOICE);
-                } else if (finder.indexOf('jarvis') >= 0 || finder.indexOf('yarbis') >= 0) {
-                    textVOICE = '¡Hola!, ¿Señor Stark?';
-                    _this.speak(textVOICE);
-                } else if (finder.indexOf('nombre') >= 0) {
-                    textVOICE = '¡QUe tal Danae!, Ya deja trabajar a tu papi, tiene mucho que hacer';
-                    _this.speak(textVOICE);
-                } else {
-                    textVOICE = '¡Que tal!, Soy Vicky. ... ¿En que te puedo ayudar?';
-                    _this.speak(textVOICE);
+            if (trigger.toLowerCase() == "seleccion") {
+                window.setTimeout(function() {
+                    _this.speak("ok! esta es la lista perfecta para tu evento");
+                    _this.props.selectEvent(finder)
+                    return;
+                }, 1000);
+            }
+
+            if (trigger.toLowerCase() == 'aceptacion') {
+                _this.speak('Perfecto!, ahora dime, quieres "recoger en tienda" o "servicio a domicilio!"');
+                _this.props.acceptOrder();
+            }
+
+            if (trigger.toLowerCase() == 'envio') {
+                console.log("TRIGGER", finder)
+                if (finder.trim().toLowerCase() == 'a domicilio') {
+                    _this.speak('Excelente!, Te enviaremos tu pedido hasta tu domicilio"');
                 }
-            }
-            if (trigger == 'juega') {
-                if (finder.indexOf('chiste') >= 1) {
-                    textVOICE = ['¿El dinero o la vida?. Lo siento, soy programador. i?.  ... No tengo dinero ni vida.', '¿Que le dice un bit al otro?. Nos vemos en el bus', '¿Cuántos programadores hacen falta para cambiar una bombilla?. Ninguno. porque es un problema de hardware.', 'Sólo hay 10 tipos de personas en el mundo, las que entienden binario y las que no.'];
-                    var selected = textVOICE[Math.floor((Math.random() * textVOICE.length - 1) + 1)];
-                    _this.speak(selected);
+                if (finder.trim().toLowerCase() == 'en tienda') {
+                    _this.speak('Excelente!, tu pedido estara listo en 40 minutos');
                 }
-                if (finder.indexOf('broma') >= 1) {
-                    textVOICE = '¡No me gusta bromear, se un poco mas serio por favor!';
-                    _this.speak(textVOICE);
-                }
-                this.setState({ activeProducts: false });
+
             }
-            if (trigger == 'busca') {
-                _this.searchService(finder);
-                textVOICE = finder;
-                document.getElementById("textBox").value = textVOICE;
-                _this.speak("Buscando " + textVOICE);
-            }
-            if (trigger == 'redirect') {
-                if (finder.indexOf('registro') >= 1 || finder.indexOf('facturar') >= 1) { window.location.href = "/registro"; }
-                if (finder.indexOf('login') >= 1 || finder.indexOf('facturar') >= 1) { window.location.href = "/ingresar"; }
-                if (finder.indexOf('inicio') >= 1) { window.location.href = "/"; }
-                if (finder.indexOf('mi cuenta') >= 1) { window.location.href = "/mi-cuenta/informacion"; }
-            }
-            if (trigger == 'adios') {
-                _this.setState({ activeProducts: false, voice: false })
-                _this.speak('Adios');
-            }
+
+            // if (trigger.toLowerCase() == 'codigopostal') {
+            //     _this.speak(finder);
+            //     _this.props.setCP(finder)
+            // }
+            // if (trigger.toLowerCase() == 'store') {
+            //     //_this.props.selectedStore(finder);
+            //     _this.speak("Excelente!, tu pedido sera entregado por la tienda" + finder);
+            // }
+
+
+
+            // if (trigger.toLowerCase() == 'search') {
+            //     textVOICE = finder;
+            //     _this.props.actions.sendQuery(textVOICE.replace(/-/g, ''));
+            //     walmartVoice.config.options.active ? _this.speak("Buscando " + textVOICE) : null;
+            //     return;
+            // }
+            // if (trigger.toLowerCase() == 'redirect') {
+            //     response.filter(function(val, key) {
+            //         if (val.word.indexOf(finder.toLowerCase().trim().replace(/a |al /g, '')) >= 0) {
+            //             window.applyURL(val.url);
+            //             walmartVoice.config.options.active ? _this.speak("Redirigiendo " + finder) : null;
+            //             return;
+            //         }
+            //     })
+            // }
+
+            // if (trigger.toLowerCase() == 'explain') {
+            //     response.filter(function(val, key) {
+            //         if (val.word.indexOf(finder.toLowerCase().trim().replace(/a |al /g, '')) >= 0) {
+            //             walmartVoice.config.options.active ? _this.speak(val.text) : null;
+            //             return;
+            //         }
+            //     })
+            // }
+            // if (trigger.toLowerCase() == 'deactivate') {
+            //     this.deactivate();
+            //     _this.speak("¡Adios!")
+            // }
+            // if (trigger.toLowerCase() == 'activate') {
+            //     this.activate();
+            //     _this.speak("¡Hola, las respuestas de voz han sido activadas!")
+            // }
+        },
+        deactivate: function() {
+            walmartVoice.config.options.active = false
+        },
+        activate: function() {
+            walmartVoice.config.options.active = true
         },
         initSecuence: function() {
+
             var _this = this;
             this.SpeechRecognition = this.SpeechRecognition || webkitSpeechRecognition
             this.recognition = new this.SpeechRecognition();
-            this.recognition.lang = "es-MX";
+            this.recognition.lang = walmartVoice.config.options.mexico;
             this.recognition.continuous = false;
             this.recognition.interimResults = true;
             this.recognition.start();
@@ -168,18 +280,14 @@
                 var wordding = '';
                 for (var i = event.resultIndex; i < event.results.length; i++) {
                     if (event.results[i].isFinal) { this.wordding += event.results[i][0].transcript }
-
                 }
             }
             this.recognition.onstart = function(event) {}
             this.recognition.onerror = function(event) {}
             this.recognition.onend = function(event) {
-
                 if (this.wordding != undefined) { _this.cleanTEXT(this.wordding) }
                 //Inicia voz
                 _this.initSecuence();
-
-
             }
         },
         speak: function(text) {
@@ -202,11 +310,9 @@
                     div({ className: 'circles' },
                         div({ className: 'circleMajor' }, null),
                         div({ className: 'circlemiddle' }, null),
-                        div({ className: 'circleminor' }, null)
+                        div({ className: 'circleminor' }, null),
+
                     )
-                ),
-                div({ className: _this.state.win ? 'win active' : 'win' },
-                    _this.state.newList ? this.getSearch() : null
                 )
             );
         }

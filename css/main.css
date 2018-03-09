@@ -252,6 +252,57 @@
             top: 8px;
             position: relative; }
 
+.dynamicBanner {
+  height: 400px;
+  margin-top: 30px;
+  background-color: #60afb1;
+  position: relative; }
+  .dynamicBanner .imagenBanner {
+    width: 400px;
+    height: 100%;
+    text-align: right;
+    float: right; }
+    .dynamicBanner .imagenBanner img {
+      height: 100%;
+      float: right; }
+  .dynamicBanner .boxText {
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    margin-top: -75px;
+    left: 10%;
+    color: white; }
+    .dynamicBanner .boxText .title {
+      font-family: 'OpenSansBold';
+      font-size: 28px;
+      line-height: 50px;
+      text-align: left; }
+    .dynamicBanner .boxText .text {
+      font-family: 'OpenSansLight';
+      font-size: 18px;
+      text-align: left; }
+    .dynamicBanner .boxText .button {
+      padding: 9px 50px;
+      background-color: #1b3c59;
+      margin-top: 20px;
+      border-radius: 28px;
+      float: left;
+      transition: 0.3s;
+      cursor: pointer; }
+      .dynamicBanner .boxText .button:hover {
+        background-color: #204e77;
+        cursor: pointer; }
+      .dynamicBanner .boxText .button .text {
+        line-height: 20px;
+        font-size: 16px;
+        font-family: 'OpenSansBold'; }
+      .dynamicBanner .boxText .button .icon {
+        position: relative;
+        margin-left: 15px;
+        font-size: 20px;
+        top: 2px; }
+
 .dynamicSelecter {
   width: 100%;
   height: 800px;
@@ -525,190 +576,6 @@
     color: #b3b2b2;
     transition: 0.3s; }
 
-.dynamicBanner {
-  height: 400px;
-  margin-top: 30px;
-  background-color: #60afb1;
-  position: relative; }
-  .dynamicBanner .imagenBanner {
-    width: 400px;
-    height: 100%;
-    text-align: right;
-    float: right; }
-    .dynamicBanner .imagenBanner img {
-      height: 100%;
-      float: right; }
-  .dynamicBanner .boxText {
-    width: 500px;
-    height: 150px;
-    position: absolute;
-    top: 50%;
-    margin-top: -75px;
-    left: 10%;
-    color: white; }
-    .dynamicBanner .boxText .title {
-      font-family: 'OpenSansBold';
-      font-size: 28px;
-      line-height: 50px;
-      text-align: left; }
-    .dynamicBanner .boxText .text {
-      font-family: 'OpenSansLight';
-      font-size: 18px;
-      text-align: left; }
-    .dynamicBanner .boxText .button {
-      padding: 9px 50px;
-      background-color: #1b3c59;
-      margin-top: 20px;
-      border-radius: 28px;
-      float: left;
-      transition: 0.3s;
-      cursor: pointer; }
-      .dynamicBanner .boxText .button:hover {
-        background-color: #204e77;
-        cursor: pointer; }
-      .dynamicBanner .boxText .button .text {
-        line-height: 20px;
-        font-size: 16px;
-        font-family: 'OpenSansBold'; }
-      .dynamicBanner .boxText .button .icon {
-        position: relative;
-        margin-left: 15px;
-        font-size: 20px;
-        top: 2px; }
-
-.footer {
-  width: 100%;
-  height: 440px;
-  background-color: #456173;
-  position: relative;
-  bottom: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border-top: 2px solid #11BFAE;
-  z-index: 10;
-  float: left; }
-  .footer .socialSection {
-    background-color: #1B3C59;
-    height: 144px; }
-    .footer .socialSection .controls {
-      position: relative;
-      margin: 0 auto;
-      max-width: 70%;
-      height: 100%;
-      padding: 20px 0;
-      box-sizing: border-box; }
-      .footer .socialSection .controls .first {
-        float: left;
-        width: 100%; }
-        .footer .socialSection .controls .first .sections {
-          margin: 0;
-          padding: 0;
-          list-style-type: none; }
-          .footer .socialSection .controls .first .sections .subSection {
-            float: left;
-            width: 15%;
-            color: white;
-            font-family: 'OpenSansRegular';
-            font-size: 14px; }
-          .footer .socialSection .controls .first .sections .subSection.last {
-            width: 40%;
-            text-align: right; }
-      .footer .socialSection .controls .second {
-        float: left;
-        width: 100%;
-        height: 80px;
-        padding: 10px 0; }
-        .footer .socialSection .controls .second .secondSection {
-          width: 33.33%;
-          float: left; }
-        .footer .socialSection .controls .second .secondSection#socialnetwork {
-          padding-top: 20px; }
-          .footer .socialSection .controls .second .secondSection#socialnetwork .circleIcon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: white;
-            float: right;
-            margin: 0 0 0 15px;
-            cursor: pointer;
-            text-align: center;
-            transition: 0.3s;
-            position: relative; }
-            .footer .socialSection .controls .second .secondSection#socialnetwork .circleIcon:hover {
-              transform: scale(1.3); }
-            .footer .socialSection .controls .second .secondSection#socialnetwork .circleIcon .icon {
-              font-size: 26px;
-              position: relative;
-              top: 8px;
-              color: white; }
-          .footer .socialSection .controls .second .secondSection#socialnetwork #facebook {
-            background-color: #235b99; }
-          .footer .socialSection .controls .second .secondSection#socialnetwork #twitter {
-            background-color: #1daef3; }
-          .footer .socialSection .controls .second .secondSection#socialnetwork #instagram {
-            background-color: #e7286d; }
-          .footer .socialSection .controls .second .secondSection#socialnetwork #pinteres {
-            background-color: #fc242e; }
-          .footer .socialSection .controls .second .secondSection#socialnetwork #youtube {
-            background-color: #e61c26; }
-        .footer .socialSection .controls .second .secondSection#disclaimer {
-          padding: 0px 40px 0 0px;
-          font: 400px;
-          font-family: 'OpenSansBold';
-          color: white;
-          line-height: 22px;
-          margin-top: 22px; }
-  .footer .columns {
-    width: 70%;
-    margin: 0 auto;
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden; }
-    .footer .columns .col {
-      float: left;
-      width: 25%;
-      border: 0px solid white;
-      padding: 10px 0;
-      box-sizing: border-box; }
-      .footer .columns .col .title {
-        font-family: 'DancingBold';
-        font-size: 24px;
-        color: white;
-        line-height: 60px; }
-      .footer .columns .col ul.list {
-        list-style-type: none;
-        font-family: 'OpenSansRegular';
-        font-size: 14px; }
-        .footer .columns .col ul.list a {
-          color: white;
-          cursor: pointer;
-          line-height: 30px;
-          transition: 0.3s;
-          font-family: 'OpenSansRegular'; }
-          .footer .columns .col ul.list a:hover {
-            color: #11BFAE; }
-  .footer .logofooter {
-    width: 70px;
-    margin: 0 auto;
-    position: relative;
-    top: 8px;
-    height: 55px;
-    clear: both; }
-    .footer .logofooter img {
-      width: 100%; }
-  .footer .copy {
-    width: 100%;
-    height: 40px;
-    position: absolute;
-    bottom: 0;
-    background: #11BFAE;
-    left: 0;
-    text-align: center;
-    color: white;
-    padding: 0 10px;
-    font-size: 14px;
-    line-height: 40px; }
-
 .header {
   width: 100%;
   height: 60px;
@@ -906,6 +773,140 @@
 .header.tablet .login {
   width: 120px; }
 
+.footer {
+  width: 100%;
+  height: 440px;
+  background-color: #456173;
+  position: relative;
+  bottom: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-top: 2px solid #11BFAE;
+  z-index: 10;
+  float: left; }
+  .footer .socialSection {
+    background-color: #1B3C59;
+    height: 144px; }
+    .footer .socialSection .controls {
+      position: relative;
+      margin: 0 auto;
+      max-width: 70%;
+      height: 100%;
+      padding: 20px 0;
+      box-sizing: border-box; }
+      .footer .socialSection .controls .first {
+        float: left;
+        width: 100%; }
+        .footer .socialSection .controls .first .sections {
+          margin: 0;
+          padding: 0;
+          list-style-type: none; }
+          .footer .socialSection .controls .first .sections .subSection {
+            float: left;
+            width: 15%;
+            color: white;
+            font-family: 'OpenSansRegular';
+            font-size: 14px; }
+          .footer .socialSection .controls .first .sections .subSection.last {
+            width: 40%;
+            text-align: right; }
+      .footer .socialSection .controls .second {
+        float: left;
+        width: 100%;
+        height: 80px;
+        padding: 10px 0; }
+        .footer .socialSection .controls .second .secondSection {
+          width: 33.33%;
+          float: left; }
+        .footer .socialSection .controls .second .secondSection#socialnetwork {
+          padding-top: 20px; }
+          .footer .socialSection .controls .second .secondSection#socialnetwork .circleIcon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            float: right;
+            margin: 0 0 0 15px;
+            cursor: pointer;
+            text-align: center;
+            transition: 0.3s;
+            position: relative; }
+            .footer .socialSection .controls .second .secondSection#socialnetwork .circleIcon:hover {
+              transform: scale(1.3); }
+            .footer .socialSection .controls .second .secondSection#socialnetwork .circleIcon .icon {
+              font-size: 26px;
+              position: relative;
+              top: 8px;
+              color: white; }
+          .footer .socialSection .controls .second .secondSection#socialnetwork #facebook {
+            background-color: #235b99; }
+          .footer .socialSection .controls .second .secondSection#socialnetwork #twitter {
+            background-color: #1daef3; }
+          .footer .socialSection .controls .second .secondSection#socialnetwork #instagram {
+            background-color: #e7286d; }
+          .footer .socialSection .controls .second .secondSection#socialnetwork #pinteres {
+            background-color: #fc242e; }
+          .footer .socialSection .controls .second .secondSection#socialnetwork #youtube {
+            background-color: #e61c26; }
+        .footer .socialSection .controls .second .secondSection#disclaimer {
+          padding: 0px 40px 0 0px;
+          font: 400px;
+          font-family: 'OpenSansBold';
+          color: white;
+          line-height: 22px;
+          margin-top: 22px; }
+  .footer .columns {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden; }
+    .footer .columns .col {
+      float: left;
+      width: 25%;
+      border: 0px solid white;
+      padding: 10px 0;
+      box-sizing: border-box; }
+      .footer .columns .col .title {
+        font-family: 'DancingBold';
+        font-size: 24px;
+        color: white;
+        line-height: 60px; }
+      .footer .columns .col ul.list {
+        list-style-type: none;
+        font-family: 'OpenSansRegular';
+        font-size: 14px; }
+        .footer .columns .col ul.list a {
+          color: white;
+          cursor: pointer;
+          line-height: 30px;
+          transition: 0.3s;
+          font-family: 'OpenSansRegular'; }
+          .footer .columns .col ul.list a:hover {
+            color: #11BFAE; }
+  .footer .logofooter {
+    width: 70px;
+    margin: 0 auto;
+    position: relative;
+    top: 8px;
+    height: 55px;
+    clear: both; }
+    .footer .logofooter img {
+      width: 100%; }
+  .footer .copy {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    background: #11BFAE;
+    left: 0;
+    text-align: center;
+    color: white;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 40px; }
+
+
 .header {
   width: 100%;
   height: 60px;
@@ -1046,7 +1047,6 @@
 
 .header.tablet .login {
   width: 120px; }
-
 
 .menu {
   width: 100%;
@@ -1696,6 +1696,115 @@
             padding-right: 0;
             padding-left: 30px; }
 
+#lockheed-header, .trigger, .menu, .footer {
+  display: none; }
+
+#samAgent {
+  width: 100%;
+  height: 400px;
+  position: fixed;
+  top: 0; }
+  #samAgent .appSam {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 7px;
+    top: 90px;
+    left: 50%;
+    margin-left: -100px;
+    border-radius: 6px; }
+    #samAgent .appSam .circles {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      left: 2px;
+      top: 1px;
+      border-radius: 50%; }
+      #samAgent .appSam .circles .circleMajor {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: rgba(27, 117, 207, 0.5);
+        position: absolute;
+        z-index: 8;
+        -webkit-animation: circles 2.0s infinite;
+        animation: circles 2.0s infinite;
+        animation-timing-function: cubic-bezier(0.4, 0, 0.1, 1); }
+      #samAgent .appSam .circles .circlemiddle {
+        width: 72%;
+        height: 72%;
+        border-radius: 50%;
+        background-color: rgba(27, 117, 207, 0.7);
+        position: absolute;
+        z-index: 9;
+        left: 50%;
+        margin-left: -35%;
+        top: 50%;
+        margin-top: -35%;
+        -webkit-animation: circles 2.0s infinite;
+        animation: circles 2.0s infinite;
+        animation-timing-function: cubic-bezier(0.2, 0, 0.15, 1); }
+      #samAgent .appSam .circles .circleminor {
+        width: 42%;
+        height: 42%;
+        border-radius: 50%;
+        background-color: #1b75cf;
+        position: absolute;
+        z-index: 10;
+        left: 50%;
+        margin-left: -20%;
+        top: 50%;
+        margin-top: -20%;
+        -webkit-animation: circles 2.0s infinite;
+        animation: circles 2.0s infinite;
+        animation-timing-function: cubic-bezier(0.1, 0, 0.1, 1); }
+        #samAgent .appSam .circles .circleminor .points.finder {
+          animation: rotate 0.7s infinite 0.7s linear; }
+        #samAgent .appSam .circles .circleminor .points circle {
+          box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24); }
+        #samAgent .appSam .circles .circleminor img {
+          width: 60%;
+          position: relative;
+          top: 45%;
+          margin-top: -25%; }
+    #samAgent .appSam .textSam {
+      position: relative;
+      top: 180px;
+      font: 600 18px/33px myriad-pro, 'Source Sans Pro', 'latolight', sans-serif;
+      color: #1B75CF; }
+  #samAgent .voiceOver.active {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    top: 0; }
+  #samAgent .win.active {
+    width: 80%;
+    height: 650px; }
+  #samAgent .win {
+    transition: 0.3s;
+    width: 0%;
+    height: 0px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 4px;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    margin-left: -40%;
+    -webkit-box-shadow: 2px 3px 21px -2px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: 2px 3px 21px -2px rgba(0, 0, 0, 0.58);
+    box-shadow: 2px 3px 21px -2px rgba(0, 0, 0, 0.58); }
+
+@keyframes circles {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  25% {
+    transform: scale(1.5);
+    background-color: rgba(27, 117, 207, 0.5); }
+  0% {
+    transform: scale(1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); } }
+
 .mobile .slider {
   height: 200px; }
   .mobile .slider .sliderWrap .slide {
@@ -1811,107 +1920,3 @@
       left: 0; }
     .slider .sliderWrap .back.right {
       right: 0; }
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
-
-.appSam {
-  position: relative;
-  width: 25px;
-  height: 25px; }
-  .appSam .circles {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    left: 2px;
-    top: 1px; }
-    .appSam .circles .circleMajor {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background-color: rgba(27, 117, 207, 0.5);
-      position: absolute;
-      z-index: 8;
-      -webkit-animation: circles 2.0s infinite;
-      animation: circles 2.0s infinite;
-      animation-timing-function: cubic-bezier(0.4, 0, 0.1, 1); }
-    .appSam .circles .circlemiddle {
-      width: 76%;
-      height: 76%;
-      border-radius: 50%;
-      background-color: rgba(27, 117, 207, 0.7);
-      position: absolute;
-      z-index: 9;
-      left: 50%;
-      margin-left: -38%;
-      top: 50%;
-      margin-top: -38%;
-      -webkit-animation: circles 2.0s infinite;
-      animation: circles 2.0s infinite;
-      animation-timing-function: cubic-bezier(0.2, 0, 0.15, 1); }
-    .appSam .circles .circleminor {
-      width: 50%;
-      height: 50%;
-      border-radius: 50%;
-      background-color: #1b75cf;
-      position: absolute;
-      z-index: 10;
-      left: 50%;
-      margin-left: -25%;
-      top: 50%;
-      margin-top: -25%;
-      -webkit-animation: circles 2.0s infinite;
-      animation: circles 2.0s infinite;
-      animation-timing-function: cubic-bezier(0.1, 0, 0.1, 1); }
-      .appSam .circles .circleminor .points.finder {
-        animation: rotate 0.7s infinite 0.7s linear; }
-      .appSam .circles .circleminor .points circle {
-        box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24); }
-      .appSam .circles .circleminor img {
-        width: 60%;
-        position: relative;
-        top: 45%;
-        margin-top: -25%; }
-
-@-webkit-keyframes circles {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
-  25% {
-    transform: scale(1.5);
-    background-color: rgba(27, 117, 207, 0.5); }
-  0% {
-    transform: scale(1);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); } }
-  .appSam .textSam {
-    position: relative;
-    top: 180px;
-    font: 600 18px/33px myriad-pro, 'Source Sans Pro', 'latolight', sans-serif;
-    color: #1B75CF; }
-
-.voiceOver.active {
-  width: 100%;
-  height: 100%;
-  border-radius: 0;
-  top: 0; }
-
-.win.active {
-  width: 80%;
-  height: 650px; }
-
-.win {
-  transition: 0.3s;
-  width: 0%;
-  height: 0px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 4px;
-  position: fixed;
-  top: 100px;
-  left: 50%;
-  margin-left: -40%;
-  -webkit-box-shadow: 2px 3px 21px -2px rgba(0, 0, 0, 0.58);
-  -moz-box-shadow: 2px 3px 21px -2px rgba(0, 0, 0, 0.58);
-  box-shadow: 2px 3px 21px -2px rgba(0, 0, 0, 0.58); }

@@ -47,6 +47,7 @@ var files = [
     './app/components/header.js',
     './app/components/footer.js',
     './app/components/slider.js',
+    './app/components/dictionary.js',
     './app/components/vicky.js',
     './app/components/brands.js',
     './app/components/menumicuenta.js',
@@ -59,6 +60,12 @@ var files = [
     './app/components/card.js',
     './app/components/dynamicBanner.js',
     './app/components/shes.js',
+    './app/components/carrito.js',
+    './app/components/listEvents.js',
+    './app/components/listProducts.js',
+    './app/components/listStores.js',
+    
+    
 
 
     // Views
@@ -100,8 +107,10 @@ var files = [
     './app/controllers/terminos.js',
     // App Controllers
     './app/controllers/appnail.js',
+    './app/controllers/carrito.js',
     './app/controllers/account.js',
     './app/controllers/prices.js',
+    
     // Routes
     './app/router.js',
 ];
